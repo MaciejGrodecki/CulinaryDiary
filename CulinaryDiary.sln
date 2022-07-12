@@ -5,9 +5,14 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulinaryDiaryCore", "source\CulinaryDiaryCore\CulinaryDiaryCore.csproj", "{4C0F7744-466A-46BA-B2A0-55424606F055}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CulinaryDiaryInfrastructure", "source\CulinaryDiaryInfrastructure\CulinaryDiaryInfrastructure.csproj", "{4D236FD9-72BE-4353-979D-E15955613C8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulinaryDiaryInfrastructure", "source\CulinaryDiaryInfrastructure\CulinaryDiaryInfrastructure.csproj", "{4D236FD9-72BE-4353-979D-E15955613C8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CulinaryDiaryCoreTest", "tests\CulinaryDiaryCoreTest\CulinaryDiaryCoreTest.csproj", "{9D6EED3F-0EC8-4994-B986-2C86F83B3FED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulinaryDiaryCoreTest", "tests\CulinaryDiaryCoreTest\CulinaryDiaryCoreTest.csproj", "{9D6EED3F-0EC8-4994-B986-2C86F83B3FED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D21F3EF6-E397-4219-8126-1C4513002404}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
