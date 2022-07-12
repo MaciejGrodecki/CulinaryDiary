@@ -1,0 +1,23 @@
+﻿namespace CulinaryDiaryCoreTest.DomainTest;
+
+public class IngredientTest
+{
+    [Theory]
+    [InlineData("Garlic", 1.5, QuantityType.Piece)]
+    public void IngredientObjectShouldBeCreated(string name, double quantity, QuantityType quantityType)
+    {
+        var ingredient = new Ingredient(name, quantity, quantityType);
+
+        Assert.NotNull(ingredient);
+    }
+
+    [Theory]
+    [InlineData("", 1.5, QuantityType.Piece)]
+    [InlineData(null, 1.5, QuantityType.Piece)]
+    public void IngredientWithEmptyNameShouldNotBeCreated(string name, double quantity, QuantityType quantityType)
+    {
+        Exception exception = Assert.Throws<Exception>(() => new Ingredient(name, quantity, quantityType));
+
+        Assert.Equal("Name cannot be empty.", exception.Message);
+    }
+}
