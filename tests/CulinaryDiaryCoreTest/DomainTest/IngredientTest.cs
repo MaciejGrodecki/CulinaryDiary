@@ -20,4 +20,17 @@ public class IngredientTest
 
         Assert.Equal("Name cannot be empty.", exception.Message);
     }
+
+    [Theory]
+    [InlineData("Garlic", 0, QuantityType.Piece)]
+    [InlineData("Garlic", -1, QuantityType.Piece)]
+    public void IngredientWithZeroOrLessQuantityShouldNotBeCreated(
+        string name,
+        double quantity,
+        QuantityType quantityType)
+    {
+        Exception exception = Assert.Throws<Exception>(() => new Ingredient(name, quantity, quantityType));
+
+        Assert.Equal("Quantity must be higher than zero.", exception.Message);
+    }
 }
