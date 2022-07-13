@@ -4,6 +4,7 @@ using CulinaryDiaryInfrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CulinaryDiaryInfrastructure.Migrations
 {
     [DbContext(typeof(CulinaryDiaryContext))]
-    partial class CulinaryDiaryContextModelSnapshot : ModelSnapshot
+    [Migration("20220713181725_Recipe_create_table_with_relationships")]
+    partial class Recipe_create_table_with_relationships
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
