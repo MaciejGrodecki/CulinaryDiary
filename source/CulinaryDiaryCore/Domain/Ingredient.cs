@@ -7,6 +7,7 @@ public class Ingredient : BaseDomainClass
     public Guid IngredientId { get; set; }
     public double Quantity { get; set; }
     public QuantityType QuantityType { get; set; }
+    public Recipe Recipe { get; set; }
 
     protected Ingredient()
     {
