@@ -13,7 +13,7 @@ public class Recipe
 
     public Recipe(string description)
     {
-
+        SetDescription(description);
     }
 
     public void SetDescription(string description)
