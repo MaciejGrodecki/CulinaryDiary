@@ -7,6 +7,7 @@ public class CulinaryDiaryContext : DbContext
 
     public DbSet<Dish> Dishes;
     public DbSet<Ingredient> Ingredients;
+    public DbSet<Recipe> Recipes;
 
     public CulinaryDiaryContext(DbContextOptions<CulinaryDiaryContext> options, IOptions<SqlServerSettings> settings)
         : base(options)
@@ -29,5 +30,10 @@ public class CulinaryDiaryContext : DbContext
 
         var ingredientBuilder = modelBuilder.Entity<Ingredient>().ToTable("Ingredients");
         ingredientBuilder.HasKey(i => i.IngredientId);
+
+        var recipeBuilder = modelBuilder.Entity<Recipe>().ToTable("Recipes");
+        recipeBuilder.HasKey(i => i.RecipeId);
+        recipeBuilder.HasMany(i => i.Ingredients).WithOne(r => r.Recipe);
+        recipeBuilder.HasOne(d => d.Dish).WithOne(r => r.Recipe).HasForeignKey<Dish>(r => r.RecipeId);
     }
 }
