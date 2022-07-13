@@ -26,4 +26,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CulinaryDiaryInfrastructure\CulinaryDiaryInfrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
