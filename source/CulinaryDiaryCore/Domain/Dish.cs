@@ -2,6 +2,8 @@
 public class Dish : BaseDomainClass
 {
     public Guid DishId { get; set; }
+    public Recipe Recipe { get; set; }
+    public Guid RecipeId { get; set; }
 
     protected Dish()
     {
