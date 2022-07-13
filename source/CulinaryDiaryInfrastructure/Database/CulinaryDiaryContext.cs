@@ -15,7 +15,10 @@ public class CulinaryDiaryContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(_settings.ConnectionString, x => x.MigrationsAssembly("CulinaryDiaryAPI"));
+        optionsBuilder.UseSqlServer(
+            _settings.ConnectionString, 
+            x => x.MigrationsAssembly("CulinaryDiaryInfrastructure")
+        );
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
