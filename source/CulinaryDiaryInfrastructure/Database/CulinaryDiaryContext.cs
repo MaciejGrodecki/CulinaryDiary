@@ -23,7 +23,7 @@ public class CulinaryDiaryContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        var ingredientBuilder = modelBuilder.Entity<Ingredient>();
+        var ingredientBuilder = modelBuilder.Entity<Ingredient>().ToTable("Ingredients");
         ingredientBuilder.HasKey(i => i.IngredientId);
     }
 }
