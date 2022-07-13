@@ -2,12 +2,12 @@
 
 namespace CulinaryDiaryCore.Domain;
 
-public class Ingredient
+public class Ingredient : BaseDomainClass
 {
     public Guid IngredientId { get; set; }
-    public string Name { get; set; }
     public double Quantity { get; set; }
     public QuantityType QuantityType { get; set; }
+    public Recipe Recipe { get; set; }
 
     protected Ingredient()
     {
@@ -20,16 +20,6 @@ public class Ingredient
         SetName(name);
         SetQuantity(quantity);
         QuantityType = quantityType;
-    }
-
-    public void SetName(string name)
-    {
-        if (string.IsNullOrWhiteSpace(name))
-        {
-            throw new Exception("Name cannot be empty.");
-        }
-
-        Name = name;
     }
 
     public void SetQuantity(double quantity)
