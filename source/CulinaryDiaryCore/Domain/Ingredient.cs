@@ -14,12 +14,23 @@ public class Ingredient : BaseDomainClass
 
     }
 
-    public Ingredient(string name, double quantity, QuantityType quantityType)
+    public Ingredient(string name, double quantity, QuantityType quantityType, Recipe recipe)
     {
         IngredientId = Guid.NewGuid();
         SetName(name);
         SetQuantity(quantity);
         QuantityType = quantityType;
+        SetRecipe(recipe);
+    }
+
+    public void SetRecipe(Recipe recipe)
+    {
+        if (recipe == null)
+        {
+            throw new Exception("You must specify recipe, it cannot be null.");
+        }
+
+        Recipe = recipe;
     }
 
     public void SetQuantity(double quantity)
