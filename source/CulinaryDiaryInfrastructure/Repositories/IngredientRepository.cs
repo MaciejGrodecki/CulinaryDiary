@@ -1,31 +1,46 @@
-﻿using CulinaryDiaryCore.Domain;
-
-namespace CulinaryDiaryInfrastructure.Repositories;
+﻿namespace CulinaryDiaryInfrastructure.Repositories;
 
 public class IngredientRepository : IIngredientRepository
 {
-    public Task<IEnumerable<Ingredient>> GetAllAsync()
+    private readonly CulinaryDiaryContext _context;
+
+    public IngredientRepository(CulinaryDiaryContext context)
     {
-        throw new NotImplementedException();
+        _context = context;
     }
 
-    public Task<Ingredient> GetAsync(Guid ingredientId)
+    public async Task<IEnumerable<Ingredient>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        return await Task.FromResult(_context.Ingredients);
     }
 
-    public Task AddAsync(Ingredient ingredient)
+    public async Task<IEnumerable<Ingredient>> GetAllAsync(Recipe recipe)
     {
-        throw new NotImplementedException();
+        return await Task.FromResult(_context.Ingredients.Where(ingredient => ingredient.Recipe == recipe));
     }
 
-    public Task UpdateAsync(Ingredient ingredient)
+    public async Task<Ingredient> GetAsync(Guid ingredientId)
     {
-        throw new NotImplementedException();
+        return await Task.FromResult(
+            _context.Ingredients.SingleOrDefault(ingredient => ingredient.IngredientId == ingredientId)
+        );
     }
 
-    public Task DeleteAsync(Guid ingredientId)
+    public async Task AddAsync(Ingredient ingredient)
     {
-        throw new NotImplementedException();
+        await _context.Ingredients.AddAsync(ingredient);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task UpdateAsync(Ingredient ingredient)
+    {
+        _context.Ingredients.Update(ingredient);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task DeleteAsync(Ingredient ingredient)
+    {
+        _context.Ingredients.Remove(ingredient);
+        await _context.SaveChangesAsync();
     }
 }
