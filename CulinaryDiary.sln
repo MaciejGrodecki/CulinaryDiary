@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulinaryDiaryCore", "source\CulinaryDiaryCore\CulinaryDiaryCore.csproj", "{4C0F7744-466A-46BA-B2A0-55424606F055}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulinaryDiary.Core", "source\CulinaryDiaryCore\CulinaryDiary.Core.csproj", "{4C0F7744-466A-46BA-B2A0-55424606F055}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulinaryDiaryInfrastructure", "source\CulinaryDiaryInfrastructure\CulinaryDiaryInfrastructure.csproj", "{4D236FD9-72BE-4353-979D-E15955613C8C}"
 EndProject
