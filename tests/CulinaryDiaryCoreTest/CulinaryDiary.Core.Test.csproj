@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\source\CulinaryDiaryCore\CulinaryDiaryCore.csproj" />
+    <ProjectReference Include="..\..\source\CulinaryDiaryCore\CulinaryDiary.Core.csproj" />
   </ItemGroup>
 
 </Project>

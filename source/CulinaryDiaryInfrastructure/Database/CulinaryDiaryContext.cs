@@ -5,9 +5,9 @@ public class CulinaryDiaryContext : DbContext
 {
     private SqlServerSettings _settings;
 
-    public DbSet<Dish> Dishes;
-    public DbSet<Ingredient> Ingredients;
-    public DbSet<Recipe> Recipes;
+    public DbSet<Dish> Dishes { get; set; }
+    public DbSet<Ingredient> Ingredients { get; set; }
+    public DbSet<Recipe> Recipes { get; set; }
 
     public CulinaryDiaryContext(DbContextOptions<CulinaryDiaryContext> options, IOptions<SqlServerSettings> settings)
         : base(options)
@@ -18,7 +18,7 @@ public class CulinaryDiaryContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlServer(
-            _settings.ConnectionString, 
+            _settings.ConnectionString,
             x => x.MigrationsAssembly("CulinaryDiaryInfrastructure")
         );
     }
