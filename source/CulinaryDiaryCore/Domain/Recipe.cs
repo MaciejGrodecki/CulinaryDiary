@@ -13,6 +13,7 @@ public class Recipe
 
     public Recipe(string description)
     {
+        RecipeId = Guid.NewGuid();
         SetDescription(description);
     }
 
