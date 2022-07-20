@@ -5,7 +5,7 @@ public class CulinaryDiaryContext : DbContext
 {
     private SqlServerSettings _settings;
 
-    public DbSet<Dish> Dishes { get; set; };
+    public DbSet<Dish> Dishes { get; set; }
     public DbSet<Ingredient> Ingredients { get; set; }
     public DbSet<Recipe> Recipes { get; set; }
 

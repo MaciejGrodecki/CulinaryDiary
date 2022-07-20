@@ -25,7 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\source\CulinaryDiaryCore\CulinaryDiary.Core.csproj" />
-    <ProjectReference Include="..\..\source\CulinaryDiaryInfrastructure\CulinaryDiaryInfrastructure.csproj" />
+    <ProjectReference Include="..\..\source\CulinaryDiaryInfrastructure\CulinaryDiary.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

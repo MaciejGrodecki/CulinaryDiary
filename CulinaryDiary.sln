@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulinaryDiary.Core", "source\CulinaryDiaryCore\CulinaryDiary.Core.csproj", "{4C0F7744-466A-46BA-B2A0-55424606F055}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulinaryDiaryInfrastructure", "source\CulinaryDiaryInfrastructure\CulinaryDiaryInfrastructure.csproj", "{4D236FD9-72BE-4353-979D-E15955613C8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulinaryDiary.Infrastructure", "source\CulinaryDiaryInfrastructure\CulinaryDiary.Infrastructure.csproj", "{4D236FD9-72BE-4353-979D-E15955613C8C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulinaryDiary.Core.Test", "tests\CulinaryDiaryCoreTest\CulinaryDiary.Core.Test.csproj", "{9D6EED3F-0EC8-4994-B986-2C86F83B3FED}"
 EndProject
