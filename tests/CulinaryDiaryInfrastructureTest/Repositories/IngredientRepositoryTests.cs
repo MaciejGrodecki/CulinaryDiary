@@ -49,4 +49,19 @@ public class IngredientRepositoryTests : BaseRepositoryTest
         Assert.Equal(selectedIngredient, ingredient);
     }
 
+    [Fact]
+    public async void AddAsyncShouldAddSingleIngredient()
+    {
+        var recipe = new Recipe("Soup test recipe");
+        var ingredient = new Ingredient("Salt", 5.0, CulinaryDiaryCore.Enums.QuantityType.Gram, recipe);
+
+        IngredientRepository repo = new IngredientRepository(_context);
+
+        await repo.AddAsync(ingredient);
+
+        var addedIngredient = await repo.GetAsync(ingredient.IngredientId);
+
+        Assert.Equal(addedIngredient, ingredient);
+    }
+
 }
