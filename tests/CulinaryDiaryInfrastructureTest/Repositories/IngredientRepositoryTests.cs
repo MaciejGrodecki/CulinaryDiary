@@ -1,7 +1,4 @@
-﻿using CulinaryDiaryCore.Domain;
-using CulinaryDiaryInfrastructure.Repositories;
-
-namespace CulinaryDiary.Infrastructure.Test.Repositories;
+﻿namespace CulinaryDiary.Infrastructure.Test.Repositories;
 public class IngredientRepositoryTests : BaseRepositoryTest
 {
 
