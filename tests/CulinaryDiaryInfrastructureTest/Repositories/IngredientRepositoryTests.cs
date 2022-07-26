@@ -22,7 +22,7 @@ public class IngredientRepositoryTests : BaseRepositoryTest
     }
 
     [Fact]
-    public async void GetAllAsyncShoudldReturnAllRecipesIngredients()
+    public async void GetAllAsyncShouldReturnAllRecipesIngredients()
     {
         IngredientRepository repo = new IngredientRepository(_context);
 
@@ -33,6 +33,20 @@ public class IngredientRepositoryTests : BaseRepositoryTest
 
         Assert.Equal(2, recipeIngredients.Count());
 
+    }
+
+    [Fact]
+    public async void GetAsyncShouldReturnSingleIngredient()
+    {
+        IngredientRepository repo = new IngredientRepository(_context);
+
+        var ingredients = await repo.GetAllAsync();
+
+        var ingredient = ingredients.Select(x => x).FirstOrDefault();
+
+        var selectedIngredient = await repo.GetAsync(ingredient!.IngredientId);
+
+        Assert.Equal(selectedIngredient, ingredient);
     }
 
 }
