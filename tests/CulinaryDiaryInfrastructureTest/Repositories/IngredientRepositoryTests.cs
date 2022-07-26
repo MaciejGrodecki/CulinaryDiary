@@ -70,16 +70,33 @@ public class IngredientRepositoryTests : BaseRepositoryTest
         IngredientRepository repo = new IngredientRepository(_context);
 
         var ingredients = await repo.GetAllAsync();
-        var ingredtient = ingredients.Select(x => x).FirstOrDefault();
+        var ingredient = ingredients.Select(x => x).FirstOrDefault();
 
-        ingredtient!.SetName("updatedIngredient");
+        ingredient!.SetName("updatedIngredient");
 
-        await repo.UpdateAsync(ingredtient);
+        await repo.UpdateAsync(ingredient);
 
-        ingredtient = await repo.GetAsync(ingredtient.IngredientId);
+        ingredient = await repo.GetAsync(ingredient.IngredientId);
 
-        Assert.Equal("updatedIngredient", ingredtient.Name);
+        Assert.Equal("updatedIngredient", ingredient.Name);
 
+    }
+
+    [Fact]
+    public async void DeleteAsyncShouldDeleteIngredient()
+    {
+        IngredientRepository repo = new IngredientRepository(_context);
+
+        var ingredients = await repo.GetAllAsync();
+        var ingredient = ingredients.Select(x => x).FirstOrDefault();
+
+        var ingredientId = ingredient!.IngredientId;
+
+        await repo.DeleteAsync(ingredient);
+
+        ingredient = await repo.GetAsync(ingredientId);
+
+        Assert.Null(ingredient);
     }
 
 }
