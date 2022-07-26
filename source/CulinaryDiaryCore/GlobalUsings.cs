@@ -1,1 +1,1 @@
-﻿global using CulinaryDiaryCore.Domain;
+﻿global using CulinaryDiary.Core.Domain;

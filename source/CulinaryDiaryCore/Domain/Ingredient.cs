@@ -1,6 +1,6 @@
-﻿using CulinaryDiaryCore.Enums;
+﻿using CulinaryDiary.Core.Enums;
 
-namespace CulinaryDiaryCore.Domain;
+namespace CulinaryDiary.Core.Domain;
 
 public class Ingredient : BaseDomainClass
 {

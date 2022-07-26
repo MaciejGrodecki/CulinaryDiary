@@ -1,4 +1,4 @@
-﻿namespace CulinaryDiaryInfrastructure.Repositories;
+﻿namespace CulinaryDiary.Infrastructure.Repositories;
 
 public class IngredientRepository : IIngredientRepository
 {

@@ -1,4 +1,4 @@
-﻿using CulinaryDiaryInfrastructure.Database;
+﻿using CulinaryDiary.Infrastructure.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 

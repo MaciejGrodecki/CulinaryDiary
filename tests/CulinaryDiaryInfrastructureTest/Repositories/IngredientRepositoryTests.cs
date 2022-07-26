@@ -1,7 +1,4 @@
-﻿using CulinaryDiaryCore.Domain;
-using CulinaryDiaryInfrastructure.Repositories;
-
-namespace CulinaryDiary.Infrastructure.Test.Repositories;
+﻿namespace CulinaryDiary.Infrastructure.Test.Repositories;
 public class IngredientRepositoryTests : BaseRepositoryTest
 {
 
@@ -53,7 +50,7 @@ public class IngredientRepositoryTests : BaseRepositoryTest
     public async void AddAsyncShouldAddSingleIngredient()
     {
         var recipe = new Recipe("Soup test recipe");
-        var ingredient = new Ingredient("Salt", 5.0, CulinaryDiaryCore.Enums.QuantityType.Gram, recipe);
+        var ingredient = new Ingredient("Salt", 5.0, Core.Enums.QuantityType.Gram, recipe);
 
         IngredientRepository repo = new IngredientRepository(_context);
 

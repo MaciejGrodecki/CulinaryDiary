@@ -1,4 +1,4 @@
-﻿namespace CulinaryDiaryCore.Domain;
+﻿namespace CulinaryDiary.Core.Domain;
 public class Recipe
 {
     public Guid RecipeId { get; set; }

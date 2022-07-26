@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CulinaryDiaryInfrastructure.Migrations
+namespace CulinaryDiary.Infrastructure.Migrations
 {
     public partial class Recipe_create_table_with_relationships : Migration
     {
