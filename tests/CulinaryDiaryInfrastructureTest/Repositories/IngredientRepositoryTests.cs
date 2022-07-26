@@ -64,4 +64,22 @@ public class IngredientRepositoryTests : BaseRepositoryTest
         Assert.Equal(addedIngredient, ingredient);
     }
 
+    [Fact]
+    public async void UpdateAsyncShouldUpdateIngredient()
+    {
+        IngredientRepository repo = new IngredientRepository(_context);
+
+        var ingredients = await repo.GetAllAsync();
+        var ingredtient = ingredients.Select(x => x).FirstOrDefault();
+
+        ingredtient!.SetName("updatedIngredient");
+
+        await repo.UpdateAsync(ingredtient);
+
+        ingredtient = await repo.GetAsync(ingredtient.IngredientId);
+
+        Assert.Equal("updatedIngredient", ingredtient.Name);
+
+    }
+
 }
