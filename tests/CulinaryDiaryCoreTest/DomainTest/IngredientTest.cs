@@ -1,4 +1,4 @@
-﻿namespace CulinaryDiaryCoreTest.DomainTest;
+﻿namespace CulinaryDiaryCore.Test.DomainTest;
 
 public class IngredientTest
 {

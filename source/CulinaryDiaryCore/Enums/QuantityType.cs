@@ -1,4 +1,4 @@
-﻿namespace CulinaryDiaryCore.Enums;
+﻿namespace CulinaryDiary.Core.Enums;
 public enum QuantityType
 {
     Kilogram,

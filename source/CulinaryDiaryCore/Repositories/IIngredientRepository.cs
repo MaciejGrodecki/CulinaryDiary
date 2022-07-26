@@ -1,4 +1,4 @@
-﻿namespace CulinaryDiaryCore.Repositories;
+﻿namespace CulinaryDiary.Core.Repositories;
 
 public interface IIngredientRepository
 {

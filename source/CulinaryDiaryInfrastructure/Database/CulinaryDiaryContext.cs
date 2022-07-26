@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
 
-namespace CulinaryDiaryInfrastructure.Database;
+namespace CulinaryDiary.Infrastructure.Database;
 public class CulinaryDiaryContext : DbContext
 {
     private SqlServerSettings _settings;
